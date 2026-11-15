@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>ABC Engineering College</h1>
+    <p>Online Course Registration Portal</p>
+</header>
+
+<section class="intro">
+    <h2>Explore Our Courses</h2>
+    <p>Choose the right course and register online.</p>
+</section>
+
+<section class="courses">
+
+    <div class="course-card">
+        <h3>Web Development</h3>
+        <p><b>Duration:</b> 6 Months</p>
+        <p>Learn HTML, CSS, JavaScript and website development.</p>
+        <p><b>Eligibility:</b> 12th Pass / Any Stream</p>
+        <button onclick="registerCourse('Web Development')">
+            Register Now
+        </button>
+    </div>
+
+    <div class="course-card">
+        <h3>Data Science</h3>
+        <p><b>Duration:</b> 8 Months</p>
+        <p>Learn Python, data analysis and machine learning.</p>
+        <p><b>Eligibility:</b> 12th Pass with Mathematics</p>
+        <button onclick="registerCourse('Data Science')">
+            Register Now
+        </button>
+    </div>
+
+    <div class="course-card">
+        <h3>Java Programming</h3>
+        <p><b>Duration:</b> 4 Months</p>
+        <p>Learn Java programming and object-oriented concepts.</p>
+        <p><b>Eligibility:</b> Basic Computer Knowledge</p>
+        <button onclick="registerCourse('Java Programming')">
+            Register Now
+        </button>
+    </div>
+
+</section>
+
+<section class="registration">
+    <h2>Course Registration Form</h2>
+
+    <form id="registrationForm">
+        <input type="text" id="studentName"
+               placeholder="Enter Student Name" required>
+
+        <input type="email" id="email"
+               placeholder="Enter Email Address" required>
+
+        <select id="course" required>
+            <option value="">Select a Course</option>
+            <option>Web Development</option>
+            <option>Data Science</option>
+            <option>Java Programming</option>
+        </select>
+
+        <button type="submit">Submit Registration</button>
+    </form>
+
+    <p id="message"></p>
+</section>
+
+<footer>
+    <p>© 2026 ABC Engineering College | Course Registration Portal</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
