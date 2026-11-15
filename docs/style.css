@@ -6,92 +6,142 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f5fa;
-    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f5ff;
+    color: #26324b;
 }
 
+/* Header */
 header {
-    background-color: #173b70;
+    background: linear-gradient(135deg, #243b80, #7255c7);
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 55px 20px;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    font-size: 34px;
+    margin-bottom: 12px;
 }
 
+header p {
+    font-size: 17px;
+    color: #e5e7ff;
+}
+
+/* Introduction */
 .intro {
     text-align: center;
-    padding: 30px;
+    padding: 45px 20px 25px;
 }
 
 .intro h2 {
-    color: #173b70;
-    margin-bottom: 10px;
+    color: #263b80;
+    font-size: 30px;
+    margin-bottom: 12px;
 }
 
+.intro p {
+    color: #667085;
+    font-size: 16px;
+}
+
+/* Course Cards */
 .courses {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    gap: 25px;
+    padding: 30px 20px;
 }
 
 .course-card {
-    background-color: white;
-    width: 280px;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background: white;
+    width: 300px;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 22px rgba(40, 50, 100, 0.10);
+    border-top: 5px solid #7255c7;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(40, 50, 100, 0.18);
 }
 
 .course-card h3 {
-    color: #173b70;
-    margin-bottom: 15px;
+    color: #493b9b;
+    font-size: 22px;
+    margin-bottom: 18px;
 }
 
 .course-card p {
-    margin-bottom: 12px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 13px;
+    color: #596579;
 }
 
+.course-card b {
+    color: #293d77;
+}
+
+/* Buttons */
 button {
-    background-color: #1769aa;
+    background: linear-gradient(135deg, #4965ce, #8055c7);
     color: white;
     border: none;
-    padding: 11px 18px;
-    border-radius: 5px;
+    padding: 13px 20px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #104675;
+    background: #293b83;
+    transform: scale(1.03);
 }
 
+.course-card button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Registration Form */
 .registration {
-    background-color: white;
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background: white;
+    max-width: 550px;
+    margin: 45px auto;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(40, 50, 100, 0.12);
 }
 
 .registration h2 {
     text-align: center;
-    color: #173b70;
-    margin-bottom: 20px;
+    color: #293b83;
+    margin-bottom: 25px;
+    font-size: 25px;
 }
 
 input, select {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #d5d9eb;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fafbff;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #7255c7;
+    box-shadow: 0 0 5px rgba(114, 85, 199, 0.25);
 }
 
 .registration button {
@@ -100,25 +150,40 @@ input, select {
 
 #message {
     text-align: center;
-    margin-top: 15px;
-    color: green;
+    margin-top: 18px;
+    color: #16834b;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
+/* Footer */
 footer {
-    background-color: #173b70;
+    background: #202f69;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+    padding: 22px;
+    margin-top: 45px;
+    font-size: 14px;
 }
 
-@media (max-width: 600px) {
+/* Mobile Responsive */
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 26px;
+    }
+
     .courses {
         flex-direction: column;
         align-items: center;
     }
 
     .course-card {
-        width: 90%;
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .registration {
+        margin: 25px 15px;
+        padding: 25px;
     }
 }
